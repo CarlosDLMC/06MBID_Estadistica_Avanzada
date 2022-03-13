@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
 apiUrl = "https://api.pro.coinbase.com"
-sym = "BTC-USD"
+# sym = "BTC-USD"
 # sym = "BNB-USD"
 # sym = "LINK-USD"
 # sym = "ETH-USD"
@@ -18,7 +18,7 @@ sym = "BTC-USD"
 
 end_date = datetime.now().date().isoformat()
 day = timedelta(days=1)
-start_date = "2021-07-07"
+start_date = "2022-01-06"
 
 def get_prices(sym, end_date, start_date):
     barsize = "86400"
@@ -39,5 +39,5 @@ fechas = [time.strftime("%Y-%m-%d") for time in fechas]
 
 todo_junto = [f"{sym[:3]},{fechas[i]},{precios[i][2]},{precios[i][1]},{precios[i][3]},{precios[i][4]}\n" for i in range(len(precios))]
 
-with open("historicos/modificados/Solana_modificado.csv", "a") as coin:
+with open("historicos/modificados-28-febrero/Polkadot_modificado.csv", "a") as coin:
     coin.writelines(todo_junto)

@@ -1,7 +1,9 @@
 import numpy as np
 
-a = np.array([1, 2, 3])
+x = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
 
+x = np.array(x)
 
-print(np.dot(a, a))
-print(b)
+print(x[:, 0])
